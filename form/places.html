@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <title>ที่ดินและที่อยู่อาศัย</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formStyle.css">
+    <script defer src="form.js"></script> <!-- Note:: Defer to exucute javascript -->
+</head>
+<body>
+<span>ที่ดินและที่อยู่อาศัย</span>
+<div class="formManager">
+    <form>
+        <div class="containerLine">
+            <strong>ที่อยู่อาศัยปัจจุบัน</strong>
+        </div>
+        <div class="containerLine">
+            <input type="text" placeholder="บ้านเลขที่" required>
+            <input type="text" placeholder="หมู่" >
+        </div>
+        <div class="containerLine">
+            <input type="text" placeholder="ซอย">
+            <input type="text" placeholder="ถนน">
+        </div>
+        <div class="containerLine">
+            <strong>ข้อมูลสมาชิกในครัวเรือน</strong>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="Lnone" name="Lnone" checked>
+            <label for="Lnone" id="checkboxLabel">ไม่มีกรรมสิทธิ์</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="Lallowed" name="Lallowed">
+            <label for="Lallowed" id="checkboxLabel">ยินยอมให้ใช้ที่ดิน</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="LallowedIncome" name="LallowedIncome" c>
+            <label for="LallowedIncome" id="checkboxLabel">อนุญาติให้ใช้ประโยชน์จากที่ดิน</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="Lprivate" name="Lprivate">
+            <label for="Lprivate" id="checkboxLabel">ที่ดินส่วนตัวหรือถือครองร่วมกัน</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="Lhire" name="Lhire">
+            <label for="Lhire" id="checkboxLabel">เช่า<!-- เช่าปีเริ่ม --></label>
+            <!-- <input type="text">
+            <label for="Lhire" id="checkboxLabel2">ระยะเวลา</label>
+            <input type="text">
+            <label for="Lhire" id="checkboxLabel2">ปี</label> -->
+        </div>
+        <div class="containerLine">
+            <strong>ลักษณะของบ้าน</strong>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="house1" name="house1" checked> 
+            <label for="house1" id="checkboxLabel">บ้านชั้นเดียวติดพื้นดิน</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="house2" name="house2" c>
+            <label for="LallowedIncome" id="checkboxLabel">บ้านชั้นเดียวยกสูง</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="house3" name="house3">
+            <label for="house3" id="checkboxLabel">บ้าน 2 ชั้น</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="house4" name="house4">
+            <label for="house4" id="checkboxLabel">อื่น ๆ</label>
+        </div>
+
+        <div class="containerLine">
+            <button type="button" id="resetBtn">ล้าง</button>
+            <button type="submit" id="submitBtn">ยืนยัน</button>
+        </div>
+        <div id="resetDisplayer">
+            <div id="resetOverlay"></div>
+            <div id="resetCheckCon">
+                <h6 id="h6Reset">ล้างฟอร์ม</h6>
+                <p id="pReset">การดำเนินการนี้จะลบคำตอบของคุณออกจากแบบสอบถามทั้งหมด</p><br>
+                <div class="resetBElement">
+                    <button type="button" id="cancelReset">ยกเลิก</button>
+                    <button type="reset" id="reset">ล้าง</button>
+                </div>
+            </div>
+        </div> 
+    </form>
+</div>
+</body>
+</html>

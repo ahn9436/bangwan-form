@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <title>อาชีพ</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formStyle.css">
+    <script defer src="form.js"></script> <!-- Note:: Defer to exucute javascript -->
+</head>
+<body>
+<span>อาชีพ</span>
+<div class="formManager">
+    <form>
+        <div class="containerLine">
+            <input type="text" placeholder="อาชีพในปัจจุบัน" required>
+        </div>
+        <div class="containerLine">
+            <input type="text" placeholder="ประสบการณ์การทำงาน" required>
+        </div>
+        <div class="containerLine">
+            <input type="text" placeholder="ประสบการณ์การทำงาน" required>
+        </div>
+        <div class="containerLine">
+            <strong>ความถนัดและความสนใจ</strong>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="cooking" name="cooking" checked> 
+            <label for="cooking" id="checkboxLabel">การทำอาหาร</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="localstuff" name="localstuff">
+            <label for="localstuff" id="checkboxLabel">ความรู้ด้านวัฒนธรรม</label>
+            <input type="text">
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="fishing" name="fishing">
+            <label for="fishing" id="checkboxLabel">การประมงและเดินเรือ</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="artist" name="artist">
+            <label for="artist" id="checkboxLabel">ศิลปะหรือการวาดรูป</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="traveler" name="traveler">
+            <label for="traveler" id="checkboxLabel">การเดินป่าและนำเส้นทางท่องเที่ยว</label>
+            <input type="text">
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="localcareer" name="localcareer">
+            <label for="localcareer" id="checkboxLabel">ทักษะอาชีพพื้นบ้าน</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="comedy" name="comedy">
+            <label for="comedy" id="checkboxLabel">ทักษะการแสดง</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="language" name="language">
+            <label for="language" id="checkboxLabel">ทักษะการใช้ภาษา</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="technologies" name="technologies">
+            <label for="technologies" id="checkboxLabel">ทักษะการใช้เทคโนโลยี</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="communicating" name="communicating">
+            <label for="communicating" id="checkboxLabel">ทักษะด้านการสื่อสารและติดต่อประสางาน</label>
+        </div>
+        <div class="containerLine">
+            <input type="checkbox" id="else" name="else">
+            <label for="else" id="checkboxLabel">ทักษะอื่นๆ</label>
+            <input type="text">
+        </div>
+
+        <div class="containerLine">
+            <button type="button" id="resetBtn">ล้าง</button>
+            <button type="submit" id="submitBtn">ยืนยัน</button>
+        </div>
+        <div id="resetDisplayer">
+            <div id="resetOverlay"></div>
+            <div id="resetCheckCon">
+                <h6 id="h6Reset">ล้างฟอร์ม</h6>
+                <p id="pReset">การดำเนินการนี้จะลบคำตอบของคุณออกจากแบบสอบถามทั้งหมด</p><br>
+                <div class="resetBElement">
+                    <button type="button" id="cancelReset">ยกเลิก</button>
+                    <button type="reset" id="reset">ล้าง</button>
+                </div>
+            </div>
+        </div> 
+    </form>
+</div>
+</body>
+</html>
