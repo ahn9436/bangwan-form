@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <title>ข้อมูลส่วนตัว</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formStyle.css">
+    <script defer src="form.js"></script> <!-- Note:: Defer to exucute javascript -->
+</head>
+<body>
+<span>ข้อมูลส่วนตัว</span>
+<div class="formManager">
+    <form>
+        <div class="containerLine">
+            <input type="text" placeholder="ชื่อ - นามสกุล" required>
+        </div>
+        <div class="containerLine">
+            <input type="number" placeholder="อายุ-ปี" required>
+            <input type="date" placeholder="วันเกิด วว/ดด/ปปปป" required>
+        </div>
+        <div class="containerLine">
+            <input type="tel" placeholder="หมายเลขโทรศัพท์" >
+            <input type="text" minlength="13" maxlength="20" placeholder="หมายเลขบัตรประชาชน">
+        </div>
+        <div class="centertext">
+            <strong>ข้อมูลสมาชิกในครัวเรือน</strong>
+        </div>
+        <div class="containerLine">
+            <label for="familymember">จำนวนสมาชิกในครัวเรือน</label>
+            <select name="familymember" id="familymember">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <div id="ageInputsContainer"></div>
+        <div class="containerLine">
+            <input type="text" placeholder="อาชีพของคนในครอบครัว ใส่ได้หลายอย่าง" required>
+        </div>
+        <div class="containerLine"></div>
+        <div class="containerLine">
+            <button type="button" id="resetBtn">ล้าง</button>
+            <button type="submit" id="submitBtn">ยืนยัน</button>
+        </div>
+        <div id="resetDisplayer">
+            <div id="resetOverlay"></div>
+            <div id="resetCheckCon">
+                <h6 id="h6Reset">ล้างฟอร์ม</h6>
+                <p id="pReset">การดำเนินการนี้จะลบคำตอบของคุณออกจากแบบสอบถามทั้งหมด</p><br>
+                <div class="resetBElement">
+                    <button type="button" id="cancelReset">ยกเลิก</button>
+                    <button type="reset" id="reset">ล้าง</button>
+                </div>
+            </div>
+        </div> 
+    </form>
+</div>
+</body>
+</html>

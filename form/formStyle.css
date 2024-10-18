@@ -1,0 +1,248 @@
+:root {
+    --font-color: black;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #d1ffcc;
+
+}
+span {
+    margin: 0px;
+    display: flex;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 2.5vh;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 50px 50px;
+    height: 10vh;
+    min-height: 100px;
+    max-height: 300px;
+    background-color: #41e357;
+    z-index: 4;
+}
+
+.formManager {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin: 0 5%;
+    min-width: 375px;
+    max-width: 533px;
+}
+.containerLine {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    height: fit-content;
+    max-height: 80px;
+    margin: 0 0 7% 0;
+    flex-grow: 1;
+    z-index: 5;
+}
+.containerLine:first-child {
+    margin-top: 60px;
+}
+
+
+/* input style zone */
+input {
+    display: flex;
+    position: relative;
+    padding: 0 8px;
+    flex-grow: 1;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-height: 50px;
+    min-height: 40px;
+    min-width: 1px;
+    font-size: 15pt;
+    box-sizing: content-box;
+    z-index: 6;
+}
+input::placeholder {
+    font-size: 13pt;
+    text-align: start;
+    margin-bottom: 10px;
+}
+input[type="date"] {
+    border:  2px solid black;
+    opacity: 0.8;
+}
+input[type="number"]:invalid {
+    border:  1px solid red;
+}
+input[type="text"]:invalid {
+    border:  1px solid red;
+}
+
+.centertext {
+    text-align: center;
+    margin: 9% 0;
+}
+strong {
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+/* select element */
+select {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    border: 1px solid black;
+    border-radius: 10px;
+    max-height: 50px;
+    min-height: 40px;
+    min-width: 1px;
+    padding: 0 8px;
+    font-size: 15pt;
+    box-sizing: content-box;
+    z-index: 6;
+}
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px 0 2px;
+    font-size: 12pt;
+    box-sizing: content-box;
+}
+
+#member {
+    display: flex;
+    align-items: center;
+    box-sizing: content-box;
+    justify-content: center;
+    font-size: 30pt;
+    border-radius: 10px;
+    background-color: #41e357;
+    height: 100px;
+    min-width: 20%;
+    margin: 30px 20px;
+}
+
+/* Age Inputs Container */
+#ageInputsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align items to the left */
+    width: 100%;
+    margin-bottom: 7%;
+}
+
+/* Styling for dynamically generated age input boxes */
+.ageInput {
+    flex: 1 1 30%; /* Each input takes up approximately 30% of the container's width */
+    max-width: 80%; /* Ensure the max width is 30% so three inputs fit per row */
+    min-width: 25%;
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    padding: 0.5vw;
+    margin: 5% 5px;
+}
+
+/* button zone */
+#submitBtn, #resetBtn {
+    display: flex;
+    font-size: 1em;
+    color: var(--font-color);
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 12px 70px;
+    margin: auto;
+}
+#submitBtn {
+    background-color: #41e357;
+}
+
+/* reset button zone */
+
+#resetDisplayer {
+    display: none;
+}
+#resetOverlay {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+    opacity: 0.5;
+    z-index: 11;
+}
+
+#resetCheckCon {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    min-width: 350px;
+    max-width: 475px;
+    width: 60%;
+    height: fit-content;
+    border-radius: 20px;
+    box-sizing: border-box;
+    z-index: 12;   
+}
+
+#h6Reset {
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    margin: 20px 0 0 20px;
+}
+#pReset {
+    display: block;
+    font-size: 1.2em;
+    margin: 20px 20px 0 20px;
+}
+
+.resetBElement {
+    display: flex;   
+    width: 100%; 
+    justify-content: end;
+}
+
+#reset, #cancelReset {
+    align-self: flex-end;
+    height: 65px;
+    width: 32%;
+    margin: 0 10px 10px 10px;
+    font-size: 100%;
+    border-radius: 20px;
+    border: none;
+    transition: 0.3s linear;
+    color: var(--font-color);
+}
+
+#reset {
+    background-color: wheat;
+}
+#reset:hover {
+    background-color: #41e357;
+}
+
+#cancelReset {
+    background-color: white;
+}
+#cancelReset:hover {
+    background-color: grey;
+}
